@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--D-DEC-0000 - Link de acesso ao arquivo ".css" (para vincular o arquivo de estilo)-->
+        <link rel="stylesheet" href="style/style.css">
+        
+        <!--D-DEC-0001 - Nome da página da aba-->
+        <title>Decodificador Alura (beta)</title>
+    </head>
+
+    <body>
+        <header class="logo">
+            <!--D-DEC-0002 Imagem Cabeçalho-->
+            <h1>
+                <div>
+                    <img src="./assets/Frame 6.png" alt="logo alura">
+                    Decodificador Alura (beta)
+                </div>
+            </h1>
+        </header>
+
+        <!--D-DEC-0003 - Caixa de texto e botões-->
+        <Main>
+
+        <Section class = "apresentacao">
+                <div>
+                    <P><label Class ="label" for="texto"><b>Digite ou Cole seu texto para Codificar / Descodificar:</b></label></p>
+                    <textarea Class = "caixa_texto" name = "texto" id ="texto" cols = "80" rows="20"></textarea>
+                    <p>
+                        <div class="botoes">
+                            <button onclick="codificar()" class = "botoes__style">Codificar</button>
+                            <button onclick="decodificar()" class = "botoes__style"> Decodificar</button>
+                            <button onclick="limparCampo()" class = "botoes__style">Limpar</button>
+                        </div> 
+                    </p>
+                </div>
+                    <Div> <<  >> </Div>
+                <div>
+                    <P><label for="texto"><b>Resultado:</b></label></P>
+                    <textarea class = "resultado" name = "texto1" id ="texto1" cols = "80" rows="20"></textarea> 
+                    <p>
+                        <div class = "botoes">
+                            <button onclick="copiar()" class = "botoes__style">Copiar</button>
+                        </div> 
+                    </p>
+                </div>
+            </Section>
+        </Main>    
+
+        <!--D-DEC-0004 - Rodapé-->
+        <Footer class = "rodape"><div style="Text-align:center">
+            <P>Desenvolvido por Tiago de Souza Santos sob orientação e suporte da Alura</P>
+            <p>Versão 0.001 (Beta)</p>
+        </div>
+        </Footer>
+        <script>src = "./app.js"</script>
+    </body>
+</html>
