@@ -27,17 +27,19 @@
 
         <Section class = "apresentacao">
                 <div>
-                    <P><label Class ="label" for="texto"><b>Digite ou Cole seu texto para Codificar / Descodificar:</b></label></p>
-                    <textarea Class = "caixa_texto" name = "texto" id ="texto" cols = "80" rows="20"></textarea>
+                    <P><label Class ="label" for="texto"><b>Digite ou Cole seu texto para Codificar / Descodificar:</b>
+                        </label>
+                    </p>
+                    <textarea Class = "caixa_texto" name = "texto2" id ="texto2" cols = "80" rows="20"></textarea>
                     <p>
                         <div class="botoes">
-                            <button onclick="codificar()" class = "botoes__style">Codificar</button>
+                            <button onclick= "codificar()"  class = "botoes__style">Codificar</button>
                             <button onclick="decodificar()" class = "botoes__style"> Decodificar</button>
-                            <button onclick="limparCampo()" class = "botoes__style">Limpar</button>
+                            <button onclick= "limparCampo()" class = "botoes__style">Limpar</button>
                         </div> 
                     </p>
                 </div>
-                    <Div> <<  >> </Div>
+                    <Div> </Div>
                 <div>
                     <P><label for="texto"><b>Resultado:</b></label></P>
                     <textarea class = "resultado" name = "texto1" id ="texto1" cols = "80" rows="20"></textarea> 
@@ -56,6 +58,60 @@
             <p>Versão 0.001 (Beta)</p>
         </div>
         </Footer>
-        <script>src = "./app.js"</script>
+    
+        <script>
+
+            function limparCampo() { 
+            const limpar = document.querySelector("textarea");
+            location.reload();
+            }
+
+            function copiar() {
+                const textoCopiado = document.getElementById ('texto1');
+                textoCopiado.select();
+                textoCopiado.setSelectionRange(0, 9999);
+                document.execCommand ('copy');
+                alert ('Texto copiado com sucesso!');
+
+                }
+            function codificar() { 
+                const texto2 = document.getElementById ("texto2")
+                texto2.select();
+                const cotexto2 = texto2
+                    .replace(/e/gi, "enter")
+                    .replace(/i/gi, "imes")
+                    .replace(/a/gi, "ai")
+                    .replace(/o/gi, "ober")
+                    .replace(/u/gi, "ufat");
+                document.execCommand ('copy');
+                texto1.select('paste');
+                
+                              
+                    
+            }
+
+
+
+            function decodificar() { 
+                const texto2 = document.getElementById ("texto2")
+                texto2.select();
+                const result = string
+                .replace(/enter/gi, "e")
+                .replace(/imes/gi, "i")
+                .replace(/ai/gi, "a")
+                .replace(/ober/gi, "o")
+                .replace(/ufat/gi, "u");
+                document.execCommand ('copy');
+                texto1.select('paste');
+               
+              
+            
+            }
+
+        
+
+        </script>
+    
+
     </body>
 </html>
